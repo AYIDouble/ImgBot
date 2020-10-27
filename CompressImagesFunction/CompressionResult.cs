@@ -1,8 +1,10 @@
 ﻿namespace CompressImagesFunction
 {
-    public class CompressionResult
+    public partial class CompressionResult
     {
         public string Title { get; set; }
+
+        public string OriginalPath { get; set; }
 
         public double SizeBefore { get; set; }
 

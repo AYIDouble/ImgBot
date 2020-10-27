@@ -5,6 +5,7 @@ packages
 pgp_private_key.txt
 pgp_password.txt
 *.pem
+!Test/**/*.pem
 *.pubxml
 *.pubxml.user
 *.csproj.user
@@ -14,4 +15,4 @@ node_modules
 lib
 .DS_Store
 UserPrefs.xml
-.vscode
+secrets.json

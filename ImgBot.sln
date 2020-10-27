@@ -1,4 +1,4 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenPrFunction", "OpenPrFunction\OpenPrFunction.csproj", "{5A6476B2-18FC-4A93-8DA9-E4A667662EC5}"
@@ -11,13 +11,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompressImagesFunction", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RouterFunction", "RouterFunction\RouterFunction.csproj", "{C7DA8CA7-8540-4698-A7C0-5537565F345B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{9C771C00-3DC2-4264-9D7B-EE051ADBF47F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{478E346B-3F08-4D0F-8757-400E2C106B88}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrPoisonHandler", "PrPoisonHandler\PrPoisonHandler.csproj", "{2F780783-3651-4506-A8AA-D23E650F3DED}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebHook", "WebHook\WebHook.csproj", "{87E56493-AEB9-4257-90C0-FB7CE65C2816}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auth", "Auth\Auth.csproj", "{9A4BAC64-E0FB-4EA4-B1E3-38143E847127}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketplaceSyncFunction", "MarketplaceSyncFunction\MarketplaceSyncFunction.csproj", "{31FB826F-41D7-4D06-B0DB-99F5DF3519DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeleteBranchFunction", "DeleteBranchFunction\DeleteBranchFunction.csproj", "{B2E354C4-067D-40E9-A957-92FFFEB2E856}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,10 +49,6 @@ Global
 		{C7DA8CA7-8540-4698-A7C0-5537565F345B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7DA8CA7-8540-4698-A7C0-5537565F345B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7DA8CA7-8540-4698-A7C0-5537565F345B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9C771C00-3DC2-4264-9D7B-EE051ADBF47F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9C771C00-3DC2-4264-9D7B-EE051ADBF47F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9C771C00-3DC2-4264-9D7B-EE051ADBF47F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9C771C00-3DC2-4264-9D7B-EE051ADBF47F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{478E346B-3F08-4D0F-8757-400E2C106B88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{478E346B-3F08-4D0F-8757-400E2C106B88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{478E346B-3F08-4D0F-8757-400E2C106B88}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -61,5 +61,17 @@ Global
 		{87E56493-AEB9-4257-90C0-FB7CE65C2816}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87E56493-AEB9-4257-90C0-FB7CE65C2816}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87E56493-AEB9-4257-90C0-FB7CE65C2816}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A4BAC64-E0FB-4EA4-B1E3-38143E847127}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A4BAC64-E0FB-4EA4-B1E3-38143E847127}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A4BAC64-E0FB-4EA4-B1E3-38143E847127}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A4BAC64-E0FB-4EA4-B1E3-38143E847127}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31FB826F-41D7-4D06-B0DB-99F5DF3519DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31FB826F-41D7-4D06-B0DB-99F5DF3519DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31FB826F-41D7-4D06-B0DB-99F5DF3519DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31FB826F-41D7-4D06-B0DB-99F5DF3519DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2E354C4-067D-40E9-A957-92FFFEB2E856}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2E354C4-067D-40E9-A957-92FFFEB2E856}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2E354C4-067D-40E9-A957-92FFFEB2E856}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2E354C4-067D-40E9-A957-92FFFEB2E856}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

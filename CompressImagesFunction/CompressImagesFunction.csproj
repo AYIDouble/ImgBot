@@ -4,80 +4,26 @@
     <AzureFunctionsVersion>v2</AzureFunctionsVersion>
   </PropertyGroup>
 
-  <PropertyGroup>
-    <CustomCommands>
-      <CustomCommands>
-        <Command>
-          <type>AfterBuild</type>
-          <command>cp ${TargetDir}/bin/runtimes/osx/native/libgit2-6311e88.dylib ${TargetDir}/bin/</command>
-        </Command>
-        <Command>
-          <type>AfterBuild</type>
-          <command>cp ${TargetDir}/bin/runtimes/win7-x86/native/git2-6311e88.dll ${TargetDir}/bin/</command>
-        </Command>
-        <Command>
-          <type>AfterBuild</type>
-          <command>cp ${TargetDir}/bin/runtimes/osx-x64/native/Magick.NET-Q16-x64.Native.dll.dylib ${TargetDir}/bin/</command>
-        </Command>
-        <Command>
-          <type>AfterBuild</type>
-          <command>cp ${TargetDir}/bin/runtimes/win7-x64/native/Magick.NET-Q16-x64.Native.dll ${TargetDir}/bin/</command>
-        </Command>
-      </CustomCommands>
-    </CustomCommands>
-  </PropertyGroup>
-
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <CustomCommands>
-      <CustomCommands>
-        <Command>
-          <type>AfterBuild</type>
-          <command>cp ${TargetDir}/bin/runtimes/osx/native/libgit2-6311e88.dylib ${TargetDir}/bin/</command>
-        </Command>
-        <Command>
-          <type>AfterBuild</type>
-          <command>cp ${TargetDir}/bin/runtimes/win7-x86/native/git2-6311e88.dll ${TargetDir}/bin/</command>
-        </Command>
-        <Command>
-          <type>AfterBuild</type>
-          <command>cp ${TargetDir}/bin/runtimes/osx-x64/native/Magick.NET-Q16-x64.Native.dll.dylib ${TargetDir}/bin/</command>
-        </Command>
-        <Command>
-          <type>AfterBuild</type>
-          <command>cp ${TargetDir}/bin/runtimes/win7-x64/native/Magick.NET-Q16-x64.Native.dll ${TargetDir}/bin/</command>
-        </Command>
-      </CustomCommands>
-    </CustomCommands>
-  </PropertyGroup>
-
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <CustomCommands>
-      <CustomCommands>
-        <Command>
-          <type>AfterBuild</type>
-          <command>cp ${TargetDir}/bin/runtimes/osx/native/libgit2-6311e88.dylib ${TargetDir}/bin/</command>
-        </Command>
-        <Command>
-          <type>AfterBuild</type>
-          <command>cp ${TargetDir}/bin/runtimes/win7-x86/native/git2-6311e88.dll ${TargetDir}/bin/</command>
-        </Command>
-        <Command>
-          <type>AfterBuild</type>
-          <command>cp ${TargetDir}/bin/runtimes/osx-x64/native/Magick.NET-Q16-x64.Native.dll.dylib ${TargetDir}/bin/</command>
-        </Command>
-        <Command>
-          <type>AfterBuild</type>
-          <command>cp ${TargetDir}/bin/runtimes/win7-x64/native/Magick.NET-Q16-x64.Native.dll ${TargetDir}/bin/</command>
-        </Command>
-      </CustomCommands>
-    </CustomCommands>
-  </PropertyGroup>
+  <Target Name="CopyNativeBinaries" AfterTargets="Build">
+    <ItemGroup>
+      <NativeBinary Include="$(TargetDir)bin/runtimes/linux-x64/native/libgit2-106a5f2.so" />
+      <NativeBinary Include="$(TargetDir)bin/runtimes/osx/native/libgit2-106a5f2.dylib" />
+      <NativeBinary Include="$(TargetDir)bin/runtimes/win-x86/native/git2-106a5f2.dll" />
+      <NativeBinary Include="$(TargetDir)bin/runtimes/linux-x64/native/Magick.Native-Q16-x64.dll.so" />
+      <NativeBinary Include="$(TargetDir)bin/runtimes/osx-x64/native/Magick.Native-Q16-x64.dll.dylib" />
+      <NativeBinary Include="$(TargetDir)bin/runtimes/win-x64/native/Magick.Native-Q16-x64.dll" />
+    </ItemGroup>
+    <Copy SourceFiles="@(NativeBinary)" DestinationFiles="@(NativeBinary->'$(TargetDir)bin/%(Filename)%(Extension)')" />
+  </Target>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.13" />
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
-    <PackageReference Include="LibGit2Sharp" Version="0.25.2" />
-    <PackageReference Include="Magick.NET-Q16-AnyCPU" Version="7.7.0" />
+    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.24" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="LibGit2Sharp" Version="0.26.2" />
+    <PackageReference Include="Magick.NET-Q16-AnyCPU" Version="7.21.1" />
+    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Storage" Version="3.0.1" />
+    <PackageReference Include="Octokit" Version="0.48.0" />
+    <PackageReference Include="WindowsAzure.Storage" Version="9.3.3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -85,15 +31,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="local.settings.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="imgbot.2017-08-23.private-key.pem">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="pgp_password.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="pgp_private_key.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

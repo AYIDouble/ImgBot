@@ -1,0 +1,46 @@
+[
+  {
+    "slug": "docs",
+    "title": "Documentation"
+  },
+  {
+    "slug": "whats-imgbot",
+    "title": "What is Imgbot?"
+  },
+  {
+    "slug": "compression",
+    "title": "Compression"
+  },
+  {
+    "slug": "configuration",
+    "title": "Configuration"
+  },
+  {
+    "slug": "schedule",
+    "title": "Schedule"
+  },
+  {
+    "slug": "ignoring-files",
+    "title": "Ignoring images"
+  },
+  {
+    "slug": "aggressive-compression",
+    "title": "Aggressive compression"
+  },
+  {
+    "slug": "compress-wiki",
+    "title": "Compress wiki"
+  },
+  {
+    "slug": "min-kb-threshold",
+    "title": "Min KB threshold"
+  },
+  {
+    "slug": "authorization",
+    "title": "Authorization"
+  },
+  {
+    "slug": "contributing",
+    "title": "Contributing to Imgbot"
+  }
+]
